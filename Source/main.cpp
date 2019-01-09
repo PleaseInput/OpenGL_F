@@ -1,3 +1,4 @@
+// only my part
 #include "../Externals/Include/Include.h"
 #include "../Externals/Include/assimp/Importer.hpp"
 #include "../Externals/Include/assimp/scene.h"
@@ -349,10 +350,10 @@ void My_LoadModels(const char *objName, vector<Shape> &obj_shapes, vector<Materi
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
 
 
-		// glVertexAttribPointer / glEnableVertexArray calls¡K
+		// glVertexAttribPointer / glEnableVertexArray callsÂ¡K
 		shape.materialID = mesh->mMaterialIndex;
 		shape.drawCount = mesh->mNumFaces * 3;
-		// save shape¡K
+		// save shapeÂ¡K
 
 		obj_shapes.push_back(shape);
 		cout << "shape[ " << i << " ].materialID = " << shape.materialID << "\n";
